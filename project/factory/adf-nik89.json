@@ -1,0 +1,15 @@
+{
+	"name": "adf-nik89",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6f539dae-4ef5-43fb-8b10-c43139cfeb28",
+		"tenantId": "acc64a54-8694-4448-885f-0e2ef4fd8bf7"
+	}
+}
