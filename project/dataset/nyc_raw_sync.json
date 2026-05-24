@@ -1,0 +1,19 @@
+{
+	"name": "nyc_raw_sync",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "nyc_green_taxi_src",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "trip-data/green_tripdata_2025-02.parquet"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

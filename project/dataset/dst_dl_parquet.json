@@ -1,0 +1,20 @@
+{
+	"name": "dst_dl_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "nyc_DL_dst",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "trips_2026_data",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
