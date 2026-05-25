@@ -62,7 +62,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_month": {
-											"value": "@{if(less(item(),9),concat('0',string(item())),string(item()))}",
+											"value": "@{if(lessOrEquals(item(),9),concat('0',string(item())),string(item()))}",
 											"type": "Expression"
 										}
 									}
