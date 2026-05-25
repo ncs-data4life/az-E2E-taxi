@@ -1,16 +1,24 @@
 {
-	"name": "nyc_raw_sync",
+	"name": "src_nyc_raw_sync",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "nyc_green_taxi_src",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_month": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "trip-data/green_tripdata_2025-02.parquet"
+				"relativeUrl": {
+					"value": "trip-data/green_tripdata_2025-0@{dataset().p_month}.parquet",
+					"type": "Expression"
+				}
 			},
 			"compressionCodec": "snappy"
 		},
