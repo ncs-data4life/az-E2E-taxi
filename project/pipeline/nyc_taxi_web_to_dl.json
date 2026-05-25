@@ -62,7 +62,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"p_month": {
-											"value": "@item()",
+											"value": "@{if(less(item(),9),concat('0',string(item())),string(item()))}",
 											"type": "Expression"
 										}
 									}
@@ -74,18 +74,6 @@
 									"type": "DatasetReference"
 								}
 							]
-						},
-						{
-							"name": "If Condition",
-							"type": "IfCondition",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"expression": {
-									"value": "@greater(item(),9 )",
-									"type": "Expression"
-								}
-							}
 						}
 					]
 				}
